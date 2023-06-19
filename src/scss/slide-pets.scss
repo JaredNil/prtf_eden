@@ -1,0 +1,107 @@
+.slide__pets {
+	position: relative;
+	.pets {
+		height: 100%;
+		width: 100%;
+
+		display: flex;
+		.pets__sidebar {
+			flex: 0 0 40%;
+			max-width: 440px;
+		}
+		.pets__content {
+			flex: 1 1 60%;
+		}
+	}
+
+	// SIDEBAR SETTING
+	.pets__sidebar {
+		display: flex;
+		flex-direction: column;
+		.pets__sidebar-title {
+			flex: 0 0 80px;
+			padding-left: 40px;
+			font-size: 32px;
+			font-weight: 100;
+
+			user-select: none;
+
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+		}
+		.pets__sidebar-bar {
+			flex: 1 1 auto;
+		}
+	}
+
+	// ITEM PETS FOR SIDEBAR
+	.pets__item {
+		position: relative;
+		padding-top: 25px;
+		padding-bottom: 35px;
+
+		overflow: hidden;
+		div {
+			user-select: none;
+		}
+		.item__label {
+			position: relative;
+			top: 0px;
+			left: 18px;
+			font-size: 12px;
+			font-weight: 300;
+			span {
+				font-size: 10px;
+			}
+		}
+		.item__text {
+			position: relative;
+			top: 2px;
+			left: 18px;
+			right: 8px;
+			width: calc(100% - 18px - 8px);
+
+			font-size: 32px;
+
+			display: flex;
+			justify-content: space-between;
+			.item__text-title {
+			}
+			.item__text-skill {
+				font-weight: 300;
+			}
+		}
+		.item__link {
+			position: relative;
+			display: block;
+			width: 100%;
+			right: 8px;
+			top: 12px;
+
+			display: flex;
+			justify-content: flex-end;
+			a {
+				background-color: $theme-phone;
+				color: $theme-block;
+				padding-top: 3px;
+				padding-bottom: 3px;
+				padding-left: 6px;
+				padding-right: 6px;
+				border-radius: 5px;
+				font-size: 30px;
+			}
+		}
+	}
+
+	// ITEM PETS FOR VISUAL EFFECT
+	.pets__item {
+		&:hover {
+			background-color: #d9d9d9;
+		}
+		&._active {
+			background-color: #ff3300;
+		}
+		transition: all 0.2s ease 0s;
+	}
+}
