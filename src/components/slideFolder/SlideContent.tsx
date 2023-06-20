@@ -21,18 +21,28 @@ const SlideContentIntro: FC = () => {
 
 	return (
 		<>
-			<section className="slide__block">
-				<div className="intro__title">
-					<div className='intro__title-top'>Welcome to <br /> Andrey </div>
-					<div className='intro__title-bottom'>Bozhenkov	<br />Portfolio</div>
-				</div>
-			</section>
+			<div className="intro__incoming bb">
+				<div className="intro__incoming-title">
 
-			<section className="intro__block">
-				<div className="slide__block"></div>
-				<div className="slide__block"></div>
-				<div className="slide__block"></div>
-			</section>
+					<div className='intro__incoming-top'>
+						<p>Portfolio of</p>
+						<br />
+						<p className='profession'>TS/JS <span>front-end</span> Dev</p>
+					</div>
+
+					<div className='intro__incoming-name'>
+						<p>Andrey</p>
+						<p>Bozhenkov</p>
+					</div>
+
+				</div>
+			</div>
+
+			<div className="intro__boxes">
+				<div className="intro__box bb"></div>
+				<div className="intro__box bb"></div>
+				<div className="intro__box bb"></div>
+			</div>
 		</ >
 	);
 

@@ -8,7 +8,7 @@ import reportWebVitals from './utils/reportWebVitals';
 import Application from './components/Application';
 
 // scss
-import './scss/index.scss'
+import '../src/scss/index.scss'
 
 
 

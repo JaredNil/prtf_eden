@@ -1,54 +1,184 @@
 @use "../scss/abstract/var";
 
 .slide__intro {
-	display: flex;
-	flex-direction: column;
+	&._disable {
+		.line__container .line__subtext-2 {
+			display: none;
+		}
+		.line__container::after {
+			content: "Андрей Боженков";
+			position: absolute;
+			transform: rotate(180deg);
+			bottom: 15px;
+
+			font-size: 14px;
+			letter-spacing: -0.2px;
+			font-weight: 500;
+			&:first-letter {
+				color: $color-red;
+			}
+		}
+	}
 	&._enable {
-		section:nth-child(1) {
+		display: flex;
+		flex-direction: column;
+		.intro__incoming {
 			flex: 0 1 60%;
 		}
-		section:nth-child(2) {
+		.intro__boxes {
 			flex: 0 0 40%;
 			min-height: 300px;
-		}
-		.intro__block {
+
 			display: flex;
-			.slide__block {
+			.intro__box {
 				flex: 0 0 33.33%;
 			}
 		}
 	}
 }
 
-.slide__intro {
-	.intro__title {
+.intro__incoming {
+	overflow: hidden;
+	.intro__incoming-title {
 		position: relative;
 		height: 100%;
 
-		.intro__title-top,
-		.intro__title-bottom {
+		.intro__incoming-top,
+		.intro__incoming-name {
 			position: absolute;
-			font-size: 130px;
-			line-height: 130px;
-			font-family: "JetBrains Mono", monospace;
-
-			font-weight: 800;
+			p {
+				// font-size: 130px;
+				// line-height: 130px;
+				font-family: "JetBrains Mono", monospace;
+				font-style: italic;
+				font-weight: 600;
+			}
 		}
-		.intro__title-top {
+		.intro__incoming-top {
 			top: 0;
 			left: 0;
 			margin-top: 5%;
 			margin-left: 5%;
+			user-select: none;
+			.profession,
+			.profession span {
+				font-family: "JetBrains Mono", monospace;
+				// line-height: 62px;
+				// font-size: 85px;
+				// letter-spacing: -8px;
+				font-style: normal;
+				font-weight: 400;
+				span {
+					font-weight: 200;
+					letter-spacing: -14px;
+				}
+			}
 		}
-		.intro__title-bottom {
+		.intro__incoming-name {
 			text-align: end;
 			bottom: 0;
 			right: 0;
 			margin-right: 5%;
 			margin-bottom: 2%;
+			p::first-letter {
+				color: $color-red;
+			}
 		}
 	}
 	*::selection {
-		background: #46464695;
+		background: $color-selection;
+	}
+}
+
+// RELATIVE
+@media (min-height: 1050px) {
+	.intro__incoming {
+		.intro__incoming-title {
+			.intro__incoming-top,
+			.intro__incoming-name {
+				p {
+					font-size: 130px;
+					line-height: 130px;
+				}
+			}
+			.intro__incoming-top {
+				.profession,
+				.profession span {
+					line-height: 62px;
+					font-size: 85px;
+					letter-spacing: -8px;
+				}
+			}
+		}
+	}
+}
+
+// RELATIVE
+@media (max-height: 1050px) {
+	.intro__incoming {
+		.intro__incoming-title {
+			.intro__incoming-top,
+			.intro__incoming-name {
+				p {
+					font-size: 85px;
+					line-height: 85px;
+				}
+			}
+			.intro__incoming-top {
+				.profession,
+				.profession span {
+					line-height: 45px;
+					font-size: 57px;
+					letter-spacing: -8px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-height: 620px), (max-width: 1130px) {
+	.intro__incoming {
+		.intro__incoming-title {
+			.intro__incoming-top,
+			.intro__incoming-name {
+				p {
+					font-size: 55px;
+					line-height: 55px;
+				}
+			}
+			.intro__incoming-top {
+				.profession,
+				.profession span {
+					line-height: 25px;
+					font-size: 35px;
+					letter-spacing: -4px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-height: 520px), (max-width: 840px) {
+	.intro__incoming {
+		.intro__incoming-title {
+			.intro__incoming-top,
+			.intro__incoming-name {
+				p {
+					top: -8px;
+					font-size: 32px;
+					line-height: 32px;
+				}
+			}
+			.intro__incoming-top {
+				.profession,
+				.profession span {
+					position: relative;
+
+					font-size: 21px;
+					line-height: 24px;
+					letter-spacing: -2px;
+				}
+			}
+		}
 	}
 }

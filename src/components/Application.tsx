@@ -48,34 +48,10 @@ const Application: FC = () => {
 						)
 					})
 				}
-
-
-				{/* <div data-slide={0} className={`slide slide__intro ${getActive(0)}`} onClick={() => handleSlide(0)}>
-
-					{(slideState[0]) ? <SlideContent slideIndex={0} /> : <SlideLine slideIndex={0} />}
-
-				</div> */}
-				{/* 
-				<div data-slide={1} className={`slide slide__pets ${getActive(1)}`} onClick={() => handleSlide(1)}>
-					<div className="slide__block">
-
-					</div>
-				</div>
-
-				<div data-slide={2} className={`slide slide__techno ${getActive(2)}`} onClick={() => handleSlide(2)}>
-					<div className="slide__block">
-
-					</div>
-				</div>
-
-				<div data-slide={3} className={`slide slide__about ${getActive(3)}`} onClick={() => handleSlide(3)}>
-					<div className="slide__block">
-
-					</div>
-				</div> */}
-
 			</div >
+
 			{/* <Footer /> */}
+
 		</>
 	);
 }

@@ -24,7 +24,10 @@ const SlideLine: FC<SlideContentPropsType> = ({ slideIndex }) => {
 			<div className="line__container">
 
 				<h2 className='line__main'>
-					{`● ${dataSlideLine[slideIndex]} `}
+					<span>●</span>
+					<div className='line__main-text'>
+						{`  ${dataSlideLine[slideIndex]} `}
+					</div>
 				</h2>
 				<div className='line__subtext-1'>
 					{`${dataSlideLineSubtext[slideIndex]} `}
@@ -33,9 +36,9 @@ const SlideLine: FC<SlideContentPropsType> = ({ slideIndex }) => {
 					{`${dataSlideLine[slideIndex]} `}
 				</div>
 
-			</div>
+			</div >
 
-		</section>
+		</section >
 	)
 }
 export default SlideLine;

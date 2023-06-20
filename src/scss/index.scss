@@ -1,7 +1,7 @@
 @import url("./abstract/null.scss");
 
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,200;0,300;1,600&display=swap");
 * {
 	font-family: "Quicksand", sans-serif;
 }
@@ -43,7 +43,8 @@
 		flex: 0 0 40px;
 	}
 
-	.slide__block {
+	.slide__block,
+	.bb {
 		border: solid 1px $theme-phone;
 		border-radius: 13px;
 		background-color: $theme-block;
@@ -88,10 +89,22 @@ section.slide__line {
 				position: absolute;
 				top: calc(72vh);
 			}
+			&::first-letter {
+				font-weight: 800;
+				letter-spacing: 1.3px;
+				color: red;
+			}
 
 			@media (max-height: 430px) {
 				font-size: 10px;
 				letter-spacing: -0.4px;
+			}
+		}
+		.line__main {
+			display: flex;
+			span::first-letter,
+			.line__main-text::first-letter {
+				color: red;
 			}
 		}
 	}
