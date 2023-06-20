@@ -1,20 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import { BrowserRouter } from "react-router-dom";
+
 import reportWebVitals from './utils/reportWebVitals';
 
+// components
 import Application from './components/Application';
 
+// scss
 import './scss/index.scss'
 
-const root = ReactDOM.createRoot(
+
+
+const root = createRoot(
 	document.getElementById('root') as HTMLElement
 );
 root.render(
-	<React.StrictMode>
-
-		<Application />
-
-	</React.StrictMode>
+	<StrictMode>
+		<BrowserRouter>
+			<Application />
+		</BrowserRouter>
+	</StrictMode>
 );
 
 
