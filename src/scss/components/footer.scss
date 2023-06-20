@@ -1,0 +1,30 @@
+.footer__wrapper {
+	position: fixed;
+	width: 100vw;
+	height: 70px;
+	bottom: 0;
+	z-index: 1000;
+
+	display: flex;
+	justify-content: center;
+	.footer {
+		height: 100%;
+		width: 95%;
+
+		background-color: $theme-block;
+		border-radius: 20px;
+
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+
+		.btn {
+			background-color: $theme-text-phone;
+			height: 40px;
+			font-size: 32px;
+			color: $theme-text-color;
+
+			cursor: pointer;
+		}
+	}
+}

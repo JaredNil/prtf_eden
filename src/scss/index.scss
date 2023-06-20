@@ -1,4 +1,4 @@
-@import url("./null.scss");
+@import url("./abstract/null.scss");
 
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@1,600&display=swap");
@@ -6,12 +6,7 @@
 	font-family: "Quicksand", sans-serif;
 }
 
-$theme-block: #ffffff;
-$theme-phone: black;
-$theme-text-phone: #2e2e2e;
-$theme-text-color: #464646;
-
-$theme-white: #f8f8f8;
+@import "../scss/abstract/var";
 
 #root {
 	position: relative;
@@ -23,62 +18,31 @@ $theme-white: #f8f8f8;
 	overflow: hidden;
 }
 
-.footer__wrapper {
-	position: fixed;
-	width: 100vw;
-	height: 70px;
-	bottom: 0;
-	z-index: 1000;
-
-	display: flex;
-	justify-content: center;
-	.footer {
-		height: 100%;
-		width: 95%;
-
-		background-color: $theme-block;
-		border-radius: 20px;
-
-		display: flex;
-		justify-content: space-around;
-		align-items: center;
-
-		.btn {
-			background-color: $theme-text-phone;
-			height: 40px;
-			font-size: 32px;
-			color: $theme-text-color;
-
-			cursor: pointer;
-		}
-	}
-}
-
 .application {
-	width: 100vw;
-	height: 100vh;
+	width: 100%;
+	height: 100%;
 
 	overflow: hidden;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .application .burger {
 	position: absolute;
 }
 
-.application {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
 .slide {
 	height: 100%;
 
-	&._active {
+	&._enable {
 		flex: 1 0 auto;
 	}
 	&._disable {
 		flex: 0 0 40px;
 	}
+
 	.slide__block {
 		border: solid 1px $theme-phone;
 		border-radius: 13px;
@@ -102,41 +66,43 @@ section.slide__line {
 	padding-top: 17px;
 
 	cursor: pointer;
-	.slide__line-container {
+
+	.line__container {
 		writing-mode: vertical-lr;
 		display: flex;
 		align-items: center;
-		h2,
-		div {
+
+		.line__main,
+		.line__subtext-1,
+		.line__subtext-2 {
 			font-size: 13px;
 			font-weight: 500;
 			letter-spacing: 0.2px;
 
 			user-select: none;
-		}
-		.slide__line-subtext-1 {
-			position: absolute;
-			top: calc(40vh);
-		}
-		.slide__line-subtext-2 {
-			position: absolute;
-			top: calc(80vh);
+			&.line__subtext-1 {
+				position: absolute;
+				top: calc(42vh);
+			}
+			&.line__subtext-2 {
+				position: absolute;
+				top: calc(72vh);
+			}
+
+			@media (max-height: 430px) {
+				font-size: 10px;
+				letter-spacing: -0.4px;
+			}
 		}
 	}
 }
 
-.slide__techno {
-	display: flex;
+@import "../scss/components/slide-intro.scss";
 
-	.slide__block {
-		flex: 0 0 100%;
-	}
-}
+@import "../scss/components/slide-pets.scss";
 
-@import url("./slide-intro.scss");
+@import "../scss/components/slide-skills.scss";
 
-@import url("./slide-pets.scss");
+@import "../scss/components/slide-about.scss";
 
-@import url("./slide-techno.scss");
-
-@import url("./slide-about.scss");
+@import "../scss/components/footer";

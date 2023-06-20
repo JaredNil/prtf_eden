@@ -19,18 +19,20 @@ const SlideLine: FC<SlideContentPropsType> = ({ slideIndex }) => {
 
 
 	return (
-		<section className='slide__line'>
-			<div className="slide__line-container">
-				<h2>
-					{`● ${dataSlideLine[slideIndex]} `}
+		<section className='slide__line line'>
 
+			<div className="line__container">
+
+				<h2 className='line__main'>
+					{`● ${dataSlideLine[slideIndex]} `}
 				</h2>
-				<div className='slide__line-subtext-1'>
+				<div className='line__subtext-1'>
 					{`${dataSlideLineSubtext[slideIndex]} `}
 				</div>
-				<div className='slide__line-subtext-2'>
+				<div className='line__subtext-2'>
 					{`${dataSlideLine[slideIndex]} `}
 				</div>
+
 			</div>
 
 		</section>

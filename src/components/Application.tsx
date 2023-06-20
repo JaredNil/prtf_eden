@@ -11,7 +11,7 @@ const Application: FC = () => {
 	const initSlideState = [1, 0, 0, 0]
 	const [slideState, setSlideState] = useState(initSlideState)
 
-	const getActive = (i: number) => (slideState[i] == 0) ? '_disable' : '_active'
+	const getActive = (i: number) => (slideState[i] == 0) ? '_disable' : '_enable'
 
 
 	const handleSlide = (i: number) => {

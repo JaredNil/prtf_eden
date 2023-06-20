@@ -8,7 +8,7 @@ export const SlideContent: FC<SlideContentPropsType> = ({ slideIndex }) => {
 	switch (slideIndex) {
 		case 0: return <SlideContentIntro />
 		case 1: return <SlideContentPets />
-		case 2: return <SlideContentTechno />
+		case 2: return <SlideContentSkills />
 		case 3: return <SlideContentAbout />
 		default: return <SlideContentIntro />
 	}
@@ -107,7 +107,7 @@ const SlideContentPets: FC = () => {
 
 }
 
-const SlideContentTechno: FC = () => {
+const SlideContentSkills: FC = () => {
 
 	return (
 		<>

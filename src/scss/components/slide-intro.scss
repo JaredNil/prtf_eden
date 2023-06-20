@@ -1,7 +1,9 @@
+@use "../scss/abstract/var";
+
 .slide__intro {
 	display: flex;
 	flex-direction: column;
-	&._active {
+	&._enable {
 		section:nth-child(1) {
 			flex: 0 1 60%;
 		}
